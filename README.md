@@ -5,7 +5,7 @@
 #Properties
 
 - `nav-color`: color of the navigation bar
-- `menuItems`: an array of menu Items
+- `menu-items`: an array of menu Items
 
 Example:
 
