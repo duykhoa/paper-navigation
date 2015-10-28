@@ -1,0 +1,40 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="paper-navigation">
+  <style>
+    :host {
+      display: block;
+      box-sizing: border-box;
+    }
+  </style>
+
+  <template>
+    <nav class$="{{navColor}}">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Love Story</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <template is="dom-repeat" items={{menuItems}}>
+            <li><a href$="[[item.url]]">[[item.title]]</a></li>
+          </template>
+        </ul>
+
+        <ul id="slide-out" class="side-nav">
+          <template is="dom-repeat" items={{menuItems}}>
+            <li><a href$="[[item.url]]">[[item.title]]</a></li>
+          </template>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </nav>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'paper-navigation',
+    properties: {
+      navColor: String,
+      menuItems: Object
+    }
+  });
+</script>
