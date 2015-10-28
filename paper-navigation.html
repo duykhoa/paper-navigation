@@ -14,7 +14,7 @@
         <a href="#" class="brand-logo">Love Story</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <template is="dom-repeat" items={{menuItems}}>
-            <li><a href$="[[item.url]]">[[item.title]]</a></li>
+            <li><a href$="[[item.url]]" class$="[[itemClass]]">[[item.title]]</a></li>
           </template>
         </ul>
 
@@ -34,6 +34,7 @@
     is: 'paper-navigation',
     properties: {
       navColor: String,
+      itemClass: String,
       menuItems: Object
     }
   });
